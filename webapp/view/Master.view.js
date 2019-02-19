@@ -22,19 +22,6 @@ sap.ui.jsview("TestApp.TestApp.view.Master", {
 
 	createContent: function (oController) {
 
-		this.oNavigationListItem = new sap.tnt.NavigationListItem({
-			items: {
-				path: "side>/navigation",
-				template: new sap.tnt.NavigationListItem({
-					key: "{side>key}",
-					text: "{side>title}",
-					expanded: "{side>expanded}",
-					icon: "{side>icon}"
-				})
-			},
-			templateShareable: false
-		});
-
 		this.oNavigationList = new sap.tnt.NavigationList({
 			items: {
 				path: "side>/navigation",
@@ -47,10 +34,6 @@ sap.ui.jsview("TestApp.TestApp.view.Master", {
 			}
 		});
 
-		this.oPage = new sap.m.Page({
-			title: "{i18n>title}",
-			content: []
-		});
 		this.oSideNavigation = new sap.tnt.SideNavigation({
 			item: this.oNavigationList
 		});
@@ -58,9 +41,14 @@ sap.ui.jsview("TestApp.TestApp.view.Master", {
 			content: [new sap.m.Button()]
 		});
 
+		var app = new sap.m.App("myApp", {
+			initialPage: "oPage"
+		});
+
 		this.oToolPage = new sap.tnt.ToolPage("app", {
 			header: this.oToolHeader,
-			mainContents: this.oPage,
+			// mainContents: this.oPage,	
+			mainContents: app,
 			sideContent: this.oSideNavigation
 		});
 
