@@ -35,19 +35,18 @@ sap.ui.jsview("TestApp.TestApp.view.Master", {
 		});
 
 		this.oSideNavigation = new sap.tnt.SideNavigation({
-			item: this.oNavigationList
+			item: this.oNavigationList,
+			itemSelect: oController.onItemSelect
 		});
 		this.oToolHeader = new sap.tnt.ToolHeader("toolHeader", {
 			content: [new sap.m.Button()]
 		});
 
-		var app = new sap.m.App("myApp", {
-			initialPage: "oPage"
+		var app = new sap.m.App("appPages", {
 		});
 
 		this.oToolPage = new sap.tnt.ToolPage("app", {
 			header: this.oToolHeader,
-			// mainContents: this.oPage,	
 			mainContents: app,
 			sideContent: this.oSideNavigation
 		});

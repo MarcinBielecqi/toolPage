@@ -14,7 +14,6 @@
 			"version": "1.40.12"
 		}
 	},
-
 	"sap.ui": {
 		"technology": "UI5",
 		"icons": {
@@ -31,7 +30,6 @@
 			"phone": true
 		}
 	},
-
 	"sap.ui5": {
 		"rootView": {
 			"viewName": "TestApp.TestApp.view.Master",
@@ -86,7 +84,21 @@
 			"routes": [{
 				"name": "RouteMaster",
 				"pattern": "RouteMaster",
-				"target": ["TargetMaster"]
+				"target": [
+					"TargetMaster"
+				]
+			}, {
+				"pattern": "BlockLayout",
+				"name": "blockLayout",
+				"target": "BlockLayout"
+			}, {
+				"pattern": "Page3",
+				"name": "page3",
+				"target": "Page3"
+			}, {
+				"pattern": "Page2",
+				"name": "page2",
+				"target": "Page2"
 			}],
 			"targets": {
 				"TargetMaster": {
@@ -95,6 +107,24 @@
 					"clearControlAggregation": false,
 					"viewId": "Master",
 					"viewName": "Master"
+				},
+				"BlockLayout": {
+					"viewId": "BlockLayout",
+					"viewName": "BlockLayout",
+					"controlId": "appPages",
+					"controlAggregation": "pages"
+				},
+				"Page2": {
+					"viewType": "JS",
+					"viewName": "Page2",
+					"controlId": "appPages",
+					"controlAggregation": "pages"
+				},
+				"Page3": {
+					"viewType": "JS",
+					"viewName": "Page3",
+					"controlId": "appPages",
+					"controlAggregation": "pages"
 				}
 			}
 		}
