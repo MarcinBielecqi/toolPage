@@ -13,14 +13,19 @@ sap.ui.jsview("TestApp.TestApp.view.BlockLayout", {
 	 * @memberOf TestApp.TestApp.view.BlockLayout
 	 */
 	createContent: function (oController) {
+
+		var oFragment = sap.ui.xmlfragment("TestApp.TestApp.view.fragments.BlockLayoutFragment");
+
 		var oPage = new sap.m.Page({
 			title: "BlockLayout",
-			content: []
+			showHeader: false,
+			content: [oFragment]
 		});
 
 		var app = new sap.m.App("myAppBlockLayout", {
-			initialPage: "oPage"
+			// initialPage: "oPage"
 		});
+		
 		app.addPage(oPage);
 		return app;
 	}
