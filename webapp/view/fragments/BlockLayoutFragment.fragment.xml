@@ -1,8 +1,8 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
 	<!--musi być layout albo form-->
-	<!--ale nie dublować np VerticalLayout w VerticalLayout-->
+	<!--ale nie wolno dublować np VerticalLayout w VerticalLayout-->
 	<l:VerticalLayout id="containerLayout" width="100%">
-		<l:BlockLayout id="BlockLayout" background = "Light">
+		<l:BlockLayout id="BlockLayout" background="Light">
 			<l:BlockLayoutRow accentCells="Accent1">
 				<l:BlockLayoutCell id="Accent1" width="2" title="Left aligned heading">
 					<Text text="text"/>

@@ -16,6 +16,20 @@ sap.ui.define([
 			// debugger;
 			var oView = this.getParent().getParent();
 			oView.getController()._oRouter.navTo(that.getSource().getSelectedKey());
+		},
+
+		onToggleSideContentModePress: function () {
+			var sIconClose = "sap-icon://close-command-field",
+				sIconOpen = "sap-icon://open-command-field",
+				oToolPage = this.getParent().getParent();
+
+			if (oToolPage.getSideExpanded()) {
+				this.setIcon(sIconOpen);
+			} else {
+				this.setIcon(sIconClose);
+			}
+
+			oToolPage.toggleSideContentMode();
 		}
 
 	});

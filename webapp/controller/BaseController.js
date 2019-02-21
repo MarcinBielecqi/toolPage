@@ -5,13 +5,19 @@ sap.ui.define([
 	"use strict";
 
 	return Controller.extend("streckenband.controller.BaseController", {
-		
-		getRouter : function () {
+
+		getRouter: function () {
 			return sap.ui.core.UIComponent.getRouterFor(this);
 		},
 
 		onNavBack: function (oEvent) {
 			jQuery.sap.log.debug("back");
+		},
+
+		setIconsModel: function () {
+			debugger;
+			var oIconsModel = new sap.ui.model.json.JSONModel();
+			this.getView().setModel(oIconsModel);
 		}
 
 	});

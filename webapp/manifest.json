@@ -64,6 +64,10 @@
 			"side": {
 				"type": "sap.ui.model.json.JSONModel",
 				"uri": "model/sideContent.json"
+			},
+			"icons": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/icons.json"
 			}
 		},
 		"resources": {

@@ -19,7 +19,7 @@ sap.ui.jsview("TestApp.TestApp.view.Page2", {
 		});
 
 		var app = new sap.m.App("myAppPage2", {
-			initialPage: "oPage"
+			// initialPage: "oPage"
 		});
 		app.addPage(oPage);
 		return app;

@@ -1,0 +1,7 @@
+{
+	"toggleSideContentModeButton": [{
+		"title": "Toggle Side Content Mode Button",
+		"icon": "sap-icon://home",
+		"controlId": "idToggleSideContentModeButton"
+	}]
+}

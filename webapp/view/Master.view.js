@@ -38,12 +38,15 @@ sap.ui.jsview("TestApp.TestApp.view.Master", {
 			item: this.oNavigationList,
 			itemSelect: oController.onItemSelect
 		});
+
 		this.oToolHeader = new sap.tnt.ToolHeader("toolHeader", {
-			content: [new sap.m.Button()]
+			content: [new sap.m.Button("idToggleSideContentModeButton", {
+				press: oController.onToggleSideContentModePress,
+				icon: "sap-icon://close-command-field"
+			})]
 		});
 
-		var app = new sap.m.App("appPages", {
-		});
+		var app = new sap.m.App("appPages", {});
 
 		this.oToolPage = new sap.tnt.ToolPage("app", {
 			header: this.oToolHeader,
