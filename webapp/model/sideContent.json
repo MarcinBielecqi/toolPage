@@ -6,10 +6,10 @@
 		"key": "blockLayout",
 		"items": []
 	}, {
-		"title": "Page2",
+		"title": "AggregationBinding",
 		"icon": "sap-icon://settings",
 		"expanded": false,
-		"key": "page2",
+		"key": "aggregationBinding",
 		"items": []
 	}, {
 		"title": "Page3",
@@ -23,5 +23,11 @@
 			"title": "titleItem2",
 			"key": "keyItem2"
 		}]
+	}, {
+		"title": "Page4",
+		"icon": "sap-icon://settings",
+		"expanded": false,
+		"key": "page4",
+		"items": []
 	}]
 }

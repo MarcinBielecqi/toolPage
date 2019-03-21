@@ -12,6 +12,15 @@
 		"sourceTemplate": {
 			"id": "ui5template.basicSAPUI5ApplicationProject",
 			"version": "1.40.12"
+		},
+		"dataSources": {
+			"ES5": {
+				"uri": "/destinations/ES5/sap/opu/odata/IWBEP/GWSAMPLE_BASIC/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0"
+				}
+			}
 		}
 	},
 	"sap.ui": {
@@ -68,6 +77,16 @@
 			"icons": {
 				"type": "sap.ui.model.json.JSONModel",
 				"uri": "model/icons.json"
+			},
+			"": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "OneWay",
+					"defaultCountMode": "Request"
+				},
+				"dataSource": "ES5",
+				"preload": true
 			}
 		},
 		"resources": {
@@ -100,9 +119,13 @@
 				"name": "page3",
 				"target": "Page3"
 			}, {
-				"pattern": "Page2",
-				"name": "page2",
-				"target": "Page2"
+				"pattern": "Page4",
+				"name": "page4",
+				"target": "Page4"
+			}, {
+				"pattern": "AggregationBinding",
+				"name": "aggregationBinding",
+				"target": "AggregationBinding"
 			}],
 			"targets": {
 				"TargetMaster": {
@@ -118,15 +141,21 @@
 					"controlId": "appPages",
 					"controlAggregation": "pages"
 				},
-				"Page2": {
+				"AggregationBinding": {
 					"viewType": "JS",
-					"viewName": "Page2",
+					"viewName": "AggregationBinding",
 					"controlId": "appPages",
 					"controlAggregation": "pages"
 				},
 				"Page3": {
 					"viewType": "JS",
 					"viewName": "Page3",
+					"controlId": "appPages",
+					"controlAggregation": "pages"
+				},
+				"Page4": {
+					"viewType": "XML",
+					"viewName": "Page4",
 					"controlId": "appPages",
 					"controlAggregation": "pages"
 				}

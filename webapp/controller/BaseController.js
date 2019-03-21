@@ -15,7 +15,7 @@ sap.ui.define([
 		},
 
 		setIconsModel: function () {
-			debugger;
+			//debugger;
 			var oIconsModel = new sap.ui.model.json.JSONModel();
 			this.getView().setModel(oIconsModel);
 		}

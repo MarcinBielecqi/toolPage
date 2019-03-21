@@ -5,13 +5,16 @@ sap.ui.define([
 
 	return Controller.extend("TestApp.TestApp.controller.Page3", {
 
+		oXMLModel: null,
+
 		/**
 		 * Called when a controller is instantiated and its View controls (if available) are already created.
 		 * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
 		 * @memberOf TestApp.TestApp.view.Page3
 		 */
 		onInit: function () {
-
+			// var oViewModel = new sap.ui.model.odata.v2.ODataModel();
+			// this.getView().setModel(oViewModel, "page3View");
 		},
 
 		/**
@@ -28,9 +31,9 @@ sap.ui.define([
 		 * This hook is the same one that SAPUI5 controls get after being rendered.
 		 * @memberOf TestApp.TestApp.view.Page3
 		 */
-		//	onAfterRendering: function() {
-		//
-		//	},
+		onAfterRendering: function () {
+
+		},
 
 		/**
 		 * Called when the Controller is destroyed. Use this one to free resources and finalize activities.
@@ -39,6 +42,36 @@ sap.ui.define([
 		//	onExit: function() {
 		//
 		//	}
+
+		onButtonPress: function (oController) {
+
+		},
+
+		setNumberState: function (Price) {
+			if (Price > 500) {
+				return "Success";
+			} else {
+				return "Error";
+			}
+		},
+
+		setFirstStatus: function (sMeasure, iWeight) {
+			var formatterMailDelivery = "deliver via mail",
+				formatterParcelDelivery = "deliver via parcel",
+				formatterCarrierDelivery = "deliver via carrier";
+
+			if (sMeasure === "G") {
+				iWeight = iWeight / 1000;
+			}
+			if (iWeight < 0.5) {
+				return formatterMailDelivery;
+			} else if (iWeight < 5) {
+				return formatterParcelDelivery;
+			} else {
+				return formatterCarrierDelivery;
+			}
+
+		}
 
 	});
 
