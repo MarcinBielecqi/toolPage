@@ -29,5 +29,11 @@
 		"expanded": false,
 		"key": "page4",
 		"items": []
+	}, {
+		"title": "HTMLFragment",
+		"icon": "sap-icon://settings",
+		"expanded": false,
+		"key": "htmlfragment",
+		"items": []
 	}]
 }

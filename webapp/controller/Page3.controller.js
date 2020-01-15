@@ -48,7 +48,7 @@ sap.ui.define([
 		},
 
 		setNumberState: function (Price) {
-			if (Price > 500) {
+			if (Price < 500) {
 				return "Success";
 			} else {
 				return "Error";

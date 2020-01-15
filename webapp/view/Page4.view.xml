@@ -1,19 +1,17 @@
-<mvc:View displayBlock="true" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns="sap.m"
-	controllerName="TestApp.TestApp.controller.Page4" xmlns:html="http://www.w3.org/1999/xhtml">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" displayBlock="true" controllerName="TestApp.TestApp.controller.Page4">
 	<App>
 		<pages>
-			<Page title="openSAP - Developing Web Apps with SAPUI5">
+			<Page id="page4" title="openSAP - Developing Web Apps with SAPUI5">
 				<content>
-					<List headerText="{i18n>productListTitle}" items="{/ProductSet}">
-						<items>
-							<ObjectListItem title="{Name}" number="{Price}" numberUnit="{CurrencyCode}" numberState="{= ${Price} > 500 ? 'Error' : 'Success'}"
-								intro="{ProductID}">
-								<firstStatus>
-									<ObjectStatus text="{ parts: [ {path: 'WeightUnit'}, {path: 'WeightMeasure'} ], formatter : '.formatter.delivery' }"/>
-								</firstStatus>
-							</ObjectListItem>
-						</items>
-					</List>
+					<!--<List headerText="{i18n>productListTitle}" items="{/ProductSet}">-->
+					<!--	<items>-->
+					<!--		<ObjectListItem type="Active" press="onListItemPress" title="{Name}" number="{Price}" numberUnit="{CurrencyCode}" numberState="{= ${Price} &gt; 500 ? 'Error' : 'Success'}" intro="{ProductID}">-->
+					<!--			<firstStatus>-->
+					<!--				<ObjectStatus class= "objectStatus" text="{ parts: [ {path: 'WeightUnit'}, {path: 'WeightMeasure'} ], formatter : '.formatter.delivery' }"/>-->
+					<!--			</firstStatus>-->
+					<!--		</ObjectListItem>-->
+					<!--	</items>-->
+					<!--</List>-->
 				</content>
 			</Page>
 		</pages>

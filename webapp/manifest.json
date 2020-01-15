@@ -123,6 +123,10 @@
 				"name": "page4",
 				"target": "Page4"
 			}, {
+				"pattern": "HTMLFragment",
+				"name": "htmlfragment",
+				"target": "HTMLFragment"
+			}, {
 				"pattern": "AggregationBinding",
 				"name": "aggregationBinding",
 				"target": "AggregationBinding"
@@ -158,8 +162,18 @@
 					"viewName": "Page4",
 					"controlId": "appPages",
 					"controlAggregation": "pages"
+				},
+				"HTMLFragment": {
+					"viewType": "XML",
+					"viewName": "HTMLFragment",
+					"controlId": "appPages",
+					"controlAggregation": "pages"
 				}
 			}
 		}
+	},
+	"sap.platform.hcp": {
+		"uri": "webapp",
+		"_version": "1.1.0"
 	}
 }

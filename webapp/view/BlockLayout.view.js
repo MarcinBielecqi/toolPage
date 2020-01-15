@@ -15,7 +15,8 @@ sap.ui.jsview("TestApp.TestApp.view.BlockLayout", {
 	createContent: function (oController) {
 
 		var oFragment = sap.ui.xmlfragment("TestApp.TestApp.view.fragments.BlockLayoutFragment");
-
+		var oHTMLFragment = sap.ui.htmlfragment("TestApp.TestApp.view.fragments.UiPartZ");
+		//debugger;
 		var oPage = new sap.m.Page({
 			title: "BlockLayout",
 			showHeader: false,
@@ -25,7 +26,7 @@ sap.ui.jsview("TestApp.TestApp.view.BlockLayout", {
 		var app = new sap.m.App("myAppBlockLayout", {
 			// initialPage: "oPage"
 		});
-		
+
 		app.addPage(oPage);
 		return app;
 	}
