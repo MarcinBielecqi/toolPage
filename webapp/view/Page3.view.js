@@ -8,6 +8,8 @@ sap.ui.jsview("TestApp.TestApp.view.Page3", {
 	 */
 	getControllerName: function () {
 		return "TestApp.TestApp.controller.Page3";
+		//added comment
+		
 	},
 
 	/** Is initially called once after the Controller has been instantiated. It is the place where the UI is constructed. 
