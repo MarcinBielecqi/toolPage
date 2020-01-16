@@ -72,6 +72,11 @@ sap.ui.define([
 		//
 		//	}
 
+		onSliderChange: function (oEvent) {
+			this.oView.byId('windyMap').setZoom(Event.AT_TARGET);
+			this.oView.byId('windyMap').getRenderer().render(undefined, this);
+		},
+
 		setFirstStatus: function (sMeasure, iWeight) {
 			var formatterMailDelivery = "deliver via mail",
 				formatterParcelDelivery = "deliver via parcel",

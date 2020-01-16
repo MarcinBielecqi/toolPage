@@ -1,10 +1,11 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="TestApp.TestApp.controller.HTMLFragment"
-	xmlns:html="http://www.w3.org/1999/xhtml">
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:cc="TestApp.TestApp.control">
 	<App>
 		<pages>
 			<Page id="pageId" title="HTML fragment">
 				<content>
-					<core:Fragment fragmentName="TestApp.TestApp.view.fragments.UiPartZ" type="HTML"> </core:Fragment>
+					<!--<core:Fragment fragmentName="TestApp.TestApp.view.fragments.UiPartZ" type="HTML"> </core:Fragment>-->
+				<cc:WindyMap id="windyMap" key="kXviELMLGnLXk7gJZ8u4oaYRLi6XWrbo" zoom="20"></cc:WindyMap>
 				</content>
 			</Page>
 		</pages>

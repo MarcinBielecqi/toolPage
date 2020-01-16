@@ -1,5 +1,6 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" displayBlock="true" controllerName="TestApp.TestApp.controller.Page4"
-xmlns:cc="TestApp.TestApp.control">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns="sap.m"
+	xmlns:html="http://www.w3.org/1999/xhtml" displayBlock="true" controllerName="TestApp.TestApp.controller.Page4"
+	xmlns:cc="TestApp.TestApp.control">
 	<App>
 		<pages>
 			<Page id="page4" title="openSAP - Developing Web Apps with SAPUI5">
@@ -13,7 +14,10 @@ xmlns:cc="TestApp.TestApp.control">
 					<!--		</ObjectListItem>-->
 					<!--	</items>-->
 					<!--</List>-->
-					<cc:WindyMap key="kXviELMLGnLXk7gJZ8u4oaYRLi6XWrbo" zoom="1"></cc:WindyMap>
+					<Slider min="1" max="10" enableTickmarks="true" class="sapUiSmallMarginBottom" width="100%" change="onSliderChange">
+						<ResponsiveScale tickmarksBetweenLabels="1"/>
+					</Slider>
+					<!--<cc:WindyMap id="windyMap" key="kXviELMLGnLXk7gJZ8u4oaYRLi6XWrbo" zoom="1"></cc:WindyMap>-->
 				</content>
 			</Page>
 		</pages>

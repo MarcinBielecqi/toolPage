@@ -9,10 +9,7 @@ sap.ui.define([
 	const options = {
 		// Required: API key
 		key: undefined, // REPLACE WITH YOUR KEY !!!
-		// key: 'kXviELMLGnLXk7gJZ8u4oaYRLi6XWrbo', // REPLACE WITH YOUR KEY !!!
-		// Put additional console output
 		verbose: undefined,
-
 		// Optional: Initial state of the map
 		lat: undefined,
 		lon: undefined,
@@ -49,6 +46,7 @@ sap.ui.define([
 
 			}
 		},
+		
 		init: function () {
 
 		},
