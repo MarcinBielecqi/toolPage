@@ -1,4 +1,5 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" displayBlock="true" controllerName="TestApp.TestApp.controller.Page4">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" displayBlock="true" controllerName="TestApp.TestApp.controller.Page4"
+xmlns:cc="TestApp.TestApp.control">
 	<App>
 		<pages>
 			<Page id="page4" title="openSAP - Developing Web Apps with SAPUI5">
@@ -12,6 +13,7 @@
 					<!--		</ObjectListItem>-->
 					<!--	</items>-->
 					<!--</List>-->
+					<cc:WindyMap></cc:WindyMap>					<cc:WindyMap></cc:WindyMap>
 				</content>
 			</Page>
 		</pages>

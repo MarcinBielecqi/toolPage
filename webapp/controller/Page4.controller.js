@@ -23,11 +23,11 @@ sap.ui.define([
 		 * @memberOf TestApp.TestApp.view.Page4
 		 */
 		onInit: function () {
-			var page = this.oView.byId('page4');
-			var mySignature = '<div id="windy"></div>';
-			var myhtml = new sap.ui.core.HTML();
-			myhtml.setContent(mySignature);
-			page.addContent(myhtml);
+			// var page = this.oView.byId('page4');
+			// var mySignature = '<div id="windy"></div>';
+			// var myhtml = new sap.ui.core.HTML();
+			// myhtml.setContent(mySignature);
+			// page.addContent(myhtml);
 			//debugger;
 		},
 
@@ -37,21 +37,21 @@ sap.ui.define([
 		 * @memberOf TestApp.TestApp.view.Page4
 		 */
 		onBeforeRendering: function () {
-			// Initialize Windy API
-			windyInit(options, windyAPI => {
-				// windyAPI is ready, and contain 'map', 'store',
-				// 'picker' and other usefull stuff
+			// // Initialize Windy API
+			// windyInit(options, windyAPI => {
+			// 	// windyAPI is ready, and contain 'map', 'store',
+			// 	// 'picker' and other usefull stuff
 
-				const {
-					map
-				} = windyAPI;
-				// .map is instance of Leaflet map
+			// 	const {
+			// 		map
+			// 	} = windyAPI;
+			// 	// .map is instance of Leaflet map
 
-				// L.popup()
-				// 	.setLatLng([50.4, 14.3])
-				// 	.setContent('Hello World')
-				// 	.openOn(map);
-			});
+			// 	// L.popup()
+			// 	// 	.setLatLng([50.4, 14.3])
+			// 	// 	.setContent('Hello World')
+			// 	// 	.openOn(map);
+			// });
 
 		},
 
