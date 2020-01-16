@@ -13,7 +13,7 @@ xmlns:cc="TestApp.TestApp.control">
 					<!--		</ObjectListItem>-->
 					<!--	</items>-->
 					<!--</List>-->
-					<cc:WindyMap></cc:WindyMap>
+					<cc:WindyMap key="kXviELMLGnLXk7gJZ8u4oaYRLi6XWrbo" zoom="1"></cc:WindyMap>
 				</content>
 			</Page>
 		</pages>

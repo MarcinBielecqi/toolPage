@@ -8,21 +8,63 @@ sap.ui.define([
 	"use strict";
 	const options = {
 		// Required: API key
-		key: 'kXviELMLGnLXk7gJZ8u4oaYRLi6XWrbo', // REPLACE WITH YOUR KEY !!!
-
+		key: undefined, // REPLACE WITH YOUR KEY !!!
+		// key: 'kXviELMLGnLXk7gJZ8u4oaYRLi6XWrbo', // REPLACE WITH YOUR KEY !!!
 		// Put additional console output
-		verbose: true,
+		verbose: undefined,
 
 		// Optional: Initial state of the map
-		lat: 50.4,
-		lon: 14.3,
-		zoom: 5,
+		lat: undefined,
+		lon: undefined,
+		zoom: undefined,
 	};
 	return Control.extend("TestApp.TestApp.control.WindyMap", {
 		metadata: {
+			properties: {
+				key: {
+					type: "string",
+					defaultValue: ''
+				},
+				verbose: {
+					type: "bool",
+					defaultValue: true
+				},
+				lat: {
+					type: "float",
+					defaultValue: 50.4
+				},
+				lon: {
+					type: "float",
+					defaultValue: 14.3
+				},
+				zoom: {
+					type: "float",
+					defaultValue: 5
+				}
+			},
+			aggregations: {
 
+			},
+			events: {
+
+			}
 		},
 		init: function () {
+
+		},
+
+		setValue: function (iValue) {
+			this.setProperty("value", iValue, true);
+			this.getAggregation("_rating").setValue(iValue);
+		},
+
+		renderer: function (oRM, oControl) {
+			options.key = oControl.getKey();
+			options.verbose = oControl.getVerbose();
+			options.lat = oControl.getLat();
+			options.lon = oControl.getLon();
+			options.zoom = oControl.getZoom();
+
 			// Initialize Windy API
 			windyInit(options, windyAPI => {
 				// windyAPI is ready, and contain 'map', 'store',
@@ -38,15 +80,8 @@ sap.ui.define([
 				// 	.setContent('Hello World')
 				// 	.openOn(map);
 			});
-		},
-
-		setValue: function (iValue) {
-			this.setProperty("value", iValue, true);
-			this.getAggregation("_rating").setValue(iValue);
-		},
-
-		renderer: function (oRM, oControl) {
-			oRM.write("<div id='windy'></div>");
+			
+			oRM.write("<div id='windy' style='width: 100%; height: 100%;'></div>");
 			// oRM.writeControlData(oControl);
 			// oRM.addClass("myAppDemoWTProductRating");
 			// oRM.writeClasses();
